@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:quotes_app/widgets/error_view.dart';
+import 'package:quotes_app/core/widgets/error_view.dart';
 
 void main() {
   testWidgets('ErrorView shows the message and calls onRetry', (tester) async {

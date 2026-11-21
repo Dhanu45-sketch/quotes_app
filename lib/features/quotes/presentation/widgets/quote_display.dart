@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quotes_app/models/quote.dart';
-import 'package:quotes_app/app/app_theme.dart';
+import 'package:quotes_app/features/quotes/domain/entities/quote.dart';
+import 'package:quotes_app/core/theme/app_theme.dart';
 
 /// Large quote + author, shared by Home and the detail screen.
 class QuoteDisplay extends StatelessWidget {

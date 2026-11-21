@@ -1,9 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:quotes_app/screens/main_screen.dart';
-import 'package:quotes_app/app/app_theme.dart';
-import 'package:quotes_app/widgets/app_logo.dart';
+import 'package:quotes_app/features/shell/presentation/screens/main_screen.dart';
+import 'package:quotes_app/core/theme/app_theme.dart';
+import 'package:quotes_app/core/widgets/app_logo.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
