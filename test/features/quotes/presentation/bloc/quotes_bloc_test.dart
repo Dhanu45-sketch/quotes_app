@@ -25,7 +25,7 @@ void main() {
     'loads the first page',
     setUp: () {
       when(() => getQuotesPage(any())).thenAnswer(
-            (_) async => const Ok(QuotesPage(quotes: [first], hasMore: true)),
+        (_) async => const Ok(QuotesPage(quotes: [first], hasMore: true)),
       );
     },
     build: buildBloc,
@@ -44,7 +44,7 @@ void main() {
     'appends the next page and stops when nothing is left',
     setUp: () {
       when(() => getQuotesPage(any())).thenAnswer(
-            (_) async => const Ok(QuotesPage(quotes: [second], hasMore: false)),
+        (_) async => const Ok(QuotesPage(quotes: [second], hasMore: false)),
       );
     },
     build: buildBloc,
@@ -122,7 +122,7 @@ void main() {
     'retry clears the error and loads the next page',
     setUp: () {
       when(() => getQuotesPage(any())).thenAnswer(
-            (_) async => const Ok(QuotesPage(quotes: [second], hasMore: false)),
+        (_) async => const Ok(QuotesPage(quotes: [second], hasMore: false)),
       );
     },
     build: buildBloc,

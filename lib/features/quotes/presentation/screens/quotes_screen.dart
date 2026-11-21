@@ -46,9 +46,7 @@ class _QuotesScreenState extends State<QuotesScreen> {
         children: [
           const ScreenTitle('Quotes'),
           Expanded(
-            child: BlocBuilder<QuotesBloc, QuotesState>(
-              builder: _buildBody,
-            ),
+            child: BlocBuilder<QuotesBloc, QuotesState>(builder: _buildBody),
           ),
         ],
       ),
@@ -58,16 +56,16 @@ class _QuotesScreenState extends State<QuotesScreen> {
   Widget _buildBody(BuildContext context, QuotesState state) {
     return switch (state.status) {
       QuotesStatus.initial ||
-      QuotesStatus.loading =>
-      const Center(child: CircularProgressIndicator()),
+      QuotesStatus.loading => const Center(child: CircularProgressIndicator()),
       QuotesStatus.failure => ErrorView(
         message:
-        state.failure?.message ?? 'Something went wrong. Please try again.',
+            state.failure?.message ?? 'Something went wrong. Please try again.',
         onRetry: () => context.read<QuotesBloc>().add(const QuotesStarted()),
       ),
-      QuotesStatus.success => state.quotes.isEmpty
-          ? const Center(child: Text('No quotes found.'))
-          : _buildList(context, state),
+      QuotesStatus.success =>
+        state.quotes.isEmpty
+            ? const Center(child: Text('No quotes found.'))
+            : _buildList(context, state),
     };
   }
 

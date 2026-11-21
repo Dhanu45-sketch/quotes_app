@@ -16,13 +16,11 @@ class ApiClient {
   final http.Client _client;
 
   Future<Map<String, dynamic>> getJson(
-      String path, {
-        Map<String, String>? queryParameters,
-      }) async {
-    final uri = Uri.parse(baseUrl).replace(
-      path: path,
-      queryParameters: queryParameters,
-    );
+    String path, {
+    Map<String, String>? queryParameters,
+  }) async {
+    final uri = Uri.parse(baseUrl)
+        .replace(path: path, queryParameters: queryParameters);
 
     final http.Response response;
     try {

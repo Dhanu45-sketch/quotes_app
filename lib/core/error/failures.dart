@@ -11,7 +11,7 @@ sealed class Failure extends Equatable {
 
 final class NetworkFailure extends Failure {
   const NetworkFailure()
-      : super('No internet connection. Check your network and try again.');
+    : super('No internet connection. Check your network and try again.');
 }
 
 final class TimeoutFailure extends Failure {
@@ -19,16 +19,13 @@ final class TimeoutFailure extends Failure {
 }
 
 final class ServerFailure extends Failure {
-  const ServerFailure()
-      : super('The server had a problem. Please try again.');
+  const ServerFailure() : super('The server had a problem. Please try again.');
 }
 
 final class InvalidResponseFailure extends Failure {
-  const InvalidResponseFailure()
-      : super('We received an unexpected response.');
+  const InvalidResponseFailure() : super('We received an unexpected response.');
 }
 
 final class UnexpectedFailure extends Failure {
-  const UnexpectedFailure()
-      : super('Something went wrong. Please try again.');
+  const UnexpectedFailure() : super('Something went wrong. Please try again.');
 }

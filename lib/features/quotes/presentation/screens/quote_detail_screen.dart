@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:quotes_app/features/quotes/domain/entities/quote.dart';
-
 import 'package:quotes_app/core/theme/app_theme.dart';
 import 'package:quotes_app/features/quotes/presentation/widgets/quote_display.dart';
 
@@ -28,7 +27,9 @@ class QuoteDetailScreen extends StatelessWidget {
             Expanded(
               child: Center(
                 child: SingleChildScrollView(
-                  padding: const EdgeInsets.symmetric(horizontal: kScreenPadding),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: kScreenPadding,
+                  ),
                   child: QuoteDisplay(quote: quote),
                 ),
               ),

@@ -19,9 +19,13 @@ void main() {
     expect(retries, 1);
   });
 
-  testWidgets('ErrorView hides Retry when there is no callback', (tester) async {
+  testWidgets('ErrorView hides Retry when there is no callback', (
+    tester,
+  ) async {
     await tester.pumpWidget(
-      const MaterialApp(home: Scaffold(body: ErrorView(message: 'Oops'))),
+      const MaterialApp(
+        home: Scaffold(body: ErrorView(message: 'Oops')),
+      ),
     );
 
     expect(find.text('Retry'), findsNothing);

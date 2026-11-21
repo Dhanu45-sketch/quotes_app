@@ -10,6 +10,9 @@ class QuotesPageModel extends QuotesPage {
         .toList(growable: false);
     final total = json['total'] as int;
     final skip = json['skip'] as int;
-    return QuotesPageModel(quotes: quotes, hasMore: skip + quotes.length < total);
+    return QuotesPageModel(
+      quotes: quotes,
+      hasMore: skip + quotes.length < total,
+    );
   }
 }

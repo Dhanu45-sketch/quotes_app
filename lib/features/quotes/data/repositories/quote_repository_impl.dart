@@ -22,7 +22,7 @@ class QuoteRepositoryImpl implements QuoteRepository {
     required int skip,
   }) {
     return _guard<QuotesPage>(
-          () => _remote.fetchQuotes(limit: limit, skip: skip),
+      () => _remote.fetchQuotes(limit: limit, skip: skip),
     );
   }
 

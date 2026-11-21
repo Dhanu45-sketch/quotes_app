@@ -15,7 +15,7 @@ class QuotesApp extends StatelessWidget {
       providers: [
         BlocProvider<RandomQuoteBloc>(
           create: (_) =>
-          sl<RandomQuoteBloc>()..add(const RandomQuoteRequested()),
+              sl<RandomQuoteBloc>()..add(const RandomQuoteRequested()),
         ),
         BlocProvider<QuotesBloc>(
           create: (_) => sl<QuotesBloc>()..add(const QuotesStarted()),

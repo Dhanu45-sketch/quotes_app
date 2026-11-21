@@ -24,9 +24,9 @@ class QuotesBloc extends Bloc<QuotesEvent, QuotesState> {
   final int _pageSize;
 
   Future<void> _onStarted(
-      QuotesStarted event,
-      Emitter<QuotesState> emit,
-      ) async {
+    QuotesStarted event,
+    Emitter<QuotesState> emit,
+  ) async {
     emit(const QuotesState(status: QuotesStatus.loading));
 
     final result = await _getQuotesPage(PageParams(limit: _pageSize, skip: 0));
@@ -46,16 +46,16 @@ class QuotesBloc extends Bloc<QuotesEvent, QuotesState> {
   }
 
   Future<void> _onNextPageRequested(
-      QuotesNextPageRequested event,
-      Emitter<QuotesState> emit,
-      ) {
+    QuotesNextPageRequested event,
+    Emitter<QuotesState> emit,
+  ) {
     return _loadNextPage(emit);
   }
 
   Future<void> _onNextPageRetried(
-      QuotesNextPageRetried event,
-      Emitter<QuotesState> emit,
-      ) {
+    QuotesNextPageRetried event,
+    Emitter<QuotesState> emit,
+  ) {
     emit(state.copyWith(clearLoadMoreFailure: true));
     return _loadNextPage(emit);
   }

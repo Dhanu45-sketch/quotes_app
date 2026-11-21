@@ -4,7 +4,6 @@ import 'package:quotes_app/features/quotes/presentation/screens/quotes_screen.da
 import 'package:quotes_app/core/theme/app_theme.dart';
 import 'package:quotes_app/core/widgets/app_logo.dart';
 
-
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
 
@@ -21,7 +20,6 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return PopScope(
-
       canPop: _index == 0,
       onPopInvokedWithResult: (didPop, result) {
         if (!didPop) setState(() => _index = 0);

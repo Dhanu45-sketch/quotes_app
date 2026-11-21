@@ -32,8 +32,9 @@ class QuotesState extends Equatable {
       hasMore: hasMore ?? this.hasMore,
       isLoadingMore: isLoadingMore ?? this.isLoadingMore,
       failure: failure,
-      loadMoreFailure:
-      clearLoadMoreFailure ? null : (loadMoreFailure ?? this.loadMoreFailure),
+      loadMoreFailure: clearLoadMoreFailure
+          ? null
+          : (loadMoreFailure ?? this.loadMoreFailure),
     );
   }
 

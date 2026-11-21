@@ -7,8 +7,6 @@ import 'package:quotes_app/features/quotes/domain/entities/quote.dart';
 import 'package:quotes_app/features/quotes/presentation/bloc/random_quote_bloc.dart';
 import 'package:quotes_app/features/quotes/presentation/widgets/quote_display.dart';
 
-
-
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -16,7 +14,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocListener<RandomQuoteBloc, RandomQuoteState>(
       listenWhen: (previous, current) =>
-      previous.status != RandomQuoteStatus.failure &&
+          previous.status != RandomQuoteStatus.failure &&
           current.status == RandomQuoteStatus.failure &&
           current.quote != null,
       listener: (context, state) {
@@ -48,7 +46,8 @@ class HomeScreen extends StatelessWidget {
   Widget _buildFirstLoad(BuildContext context, RandomQuoteState state) {
     if (state.status == RandomQuoteStatus.failure) {
       return ErrorView(
-        message: state.failure?.message ?? 'Something went wrong. Please try again.',
+        message:
+            state.failure?.message ?? 'Something went wrong. Please try again.',
         onRetry: () =>
             context.read<RandomQuoteBloc>().add(const RandomQuoteRequested()),
       );
@@ -79,7 +78,8 @@ class HomeScreen extends StatelessWidget {
   Future<void> _refresh(BuildContext context) {
     final bloc = context.read<RandomQuoteBloc>()
       ..add(const RandomQuoteRequested());
-    return bloc.stream
-        .firstWhere((state) => state.status != RandomQuoteStatus.loading);
+    return bloc.stream.firstWhere(
+      (state) => state.status != RandomQuoteStatus.loading,
+    );
   }
 }

@@ -12,16 +12,18 @@ part 'random_quote_state.dart';
 
 class RandomQuoteBloc extends Bloc<RandomQuoteEvent, RandomQuoteState> {
   RandomQuoteBloc({required this._getRandomQuote})
-      : super(const RandomQuoteState()) {
+    : super(const RandomQuoteState()) {
     on<RandomQuoteRequested>(_onRequested, transformer: droppable());
   }
   final GetRandomQuote _getRandomQuote;
 
   Future<void> _onRequested(
-      RandomQuoteRequested event,
-      Emitter<RandomQuoteState> emit,
-      ) async {
-    emit(RandomQuoteState(status: RandomQuoteStatus.loading, quote: state.quote));
+    RandomQuoteRequested event,
+    Emitter<RandomQuoteState> emit,
+  ) async {
+    emit(
+      RandomQuoteState(status: RandomQuoteStatus.loading, quote: state.quote),
+    );
 
     final result = await _getRandomQuote(const NoParams());
 

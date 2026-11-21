@@ -14,11 +14,11 @@ final GetIt sl = GetIt.instance;
 void configureDependencies() {
   sl
     ..registerLazySingleton<ApiClient>(
-          () => ApiClient(baseUrl: ApiConstants.baseUrl),
+      () => ApiClient(baseUrl: ApiConstants.baseUrl),
       dispose: (client) => client.dispose(),
     )
     ..registerLazySingleton<QuoteRemoteDataSource>(
-          () => QuoteRemoteDataSourceImpl(sl()),
+      () => QuoteRemoteDataSourceImpl(sl()),
     )
     ..registerLazySingleton<QuoteRepository>(() => QuoteRepositoryImpl(sl()))
     ..registerLazySingleton(() => GetRandomQuote(sl()))

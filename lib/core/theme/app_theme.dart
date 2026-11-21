@@ -14,48 +14,48 @@ abstract final class AppColors {
 
 abstract final class AppTextStyles {
   static TextStyle get screenTitle => GoogleFonts.quicksand(
-        fontSize: 20,
-        fontWeight: FontWeight.w700,
-        color: AppColors.titleGrey,
-      );
+    fontSize: 20,
+    fontWeight: FontWeight.w700,
+    color: AppColors.titleGrey,
+  );
 
   static TextStyle get quoteLarge => GoogleFonts.quicksand(
-        fontSize: 32,
-        fontWeight: FontWeight.w500,
-        height: 1.4,
-        color: Colors.black,
-      );
+    fontSize: 32,
+    fontWeight: FontWeight.w500,
+    height: 1.4,
+    color: Colors.black,
+  );
 
   static TextStyle get authorLarge => GoogleFonts.quicksand(
-        fontSize: 24,
-        fontWeight: FontWeight.w500,
-        color: AppColors.textSecondary,
-      );
+    fontSize: 24,
+    fontWeight: FontWeight.w500,
+    color: AppColors.textSecondary,
+  );
 
   static TextStyle get quoteCard => GoogleFonts.quicksand(
-        fontSize: 16,
-        fontWeight: FontWeight.w500,
-        height: 1.4,
-        color: Colors.black,
-      );
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+    height: 1.4,
+    color: Colors.black,
+  );
 
   static TextStyle get authorCard => GoogleFonts.quicksand(
-        fontSize: 14,
-        fontWeight: FontWeight.w500,
-        color: AppColors.textSecondary,
-      );
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+    color: AppColors.textSecondary,
+  );
 
   static TextStyle get navLabel =>
       GoogleFonts.quicksand(fontSize: 12, fontWeight: FontWeight.w600);
 
   static TextStyle get splashTitle => GoogleFonts.quicksand(
-        fontSize: 44,
-        fontWeight: FontWeight.w700,
-        color: Colors.black,
-        shadows: const [
-          Shadow(offset: Offset(0, 4), blurRadius: 4, color: Color(0x40000000)),
-        ],
-      );
+    fontSize: 44,
+    fontWeight: FontWeight.w700,
+    color: Colors.black,
+    shadows: const [
+      Shadow(offset: Offset(0, 4), blurRadius: 4, color: Color(0x40000000)),
+    ],
+  );
 }
 
 abstract final class AppTheme {

@@ -55,10 +55,8 @@ void main() {
           .thenAnswer((_) async => const Err<Quote>(NetworkFailure()));
     },
     build: () => RandomQuoteBloc(getRandomQuote: getRandomQuote),
-    seed: () => const RandomQuoteState(
-      status: RandomQuoteStatus.success,
-      quote: quote,
-    ),
+    seed: () =>
+        const RandomQuoteState(status: RandomQuoteStatus.success, quote: quote),
     act: (bloc) => bloc.add(const RandomQuoteRequested()),
     expect: () => const [
       RandomQuoteState(status: RandomQuoteStatus.loading, quote: quote),
