@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quotes_app/theme/app_theme.dart';
+import 'package:quotes_app/app/app_theme.dart';
 
 /// Opening quotation mark. Material's `format_quote` glyph is a closing quote,
 /// so it is turned 180 degrees. Colour and size fall back to the surrounding

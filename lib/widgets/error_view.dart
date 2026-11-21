@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quotes_app/theme/app_theme.dart';
+import 'package:quotes_app/app/app_theme.dart';
 
 /// Centred error message with an optional Retry button.
 class ErrorView extends StatelessWidget {

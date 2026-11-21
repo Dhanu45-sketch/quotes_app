@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quotes_app/models/quote.dart';
-import 'package:quotes_app/theme/app_theme.dart';
+import 'package:quotes_app/app/app_theme.dart';
 import 'package:quotes_app/widgets/quote_display.dart';
 
 /// "Quote Explore" screen from the design.

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quotes_app/screens/home_screen.dart';
 import 'package:quotes_app/screens/quotes_screen.dart';
-import 'package:quotes_app/theme/app_theme.dart';
+import 'package:quotes_app/app/app_theme.dart';
 import 'package:quotes_app/widgets/app_logo.dart';
 
 

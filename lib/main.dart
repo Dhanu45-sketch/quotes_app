@@ -5,7 +5,7 @@ import 'package:quotes_app/providers/quote_of_the_day_provider.dart';
 import 'package:quotes_app/providers/quotes_provider.dart';
 import 'package:quotes_app/screens/splash_screen.dart';
 import 'package:quotes_app/services/quote_service.dart';
-import 'package:quotes_app/theme/app_theme.dart';
+import 'package:quotes_app/app/app_theme.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
