@@ -6,9 +6,11 @@ import 'package:quotes_app/providers/quotes_provider.dart';
 import 'package:quotes_app/screens/splash_screen.dart';
 import 'package:quotes_app/services/quote_service.dart';
 import 'package:quotes_app/app/app_theme.dart';
+import 'package:quotes_app/injection_container.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+  configureDependencies();
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
